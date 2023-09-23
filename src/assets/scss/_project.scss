@@ -1,0 +1,72 @@
+// ======================================== [IMPORTS]
+@import './colors';
+@import './isFlex';
+@import './isGrid';
+@import './transition';
+@import './shadow';
+
+// ======================================== [PROJECT]
+body {
+    width: 100%;
+    @include is-flex(flex-start, flex-start);
+    background-color: $color-4
+}
+
+main {
+    @extend .grid-9;
+    margin-top: 3.5em;
+    padding: 0 3em;
+    @include is-flex(flex-start, flex-start);
+}
+
+.navbarVertical{
+    @include navbar-vertical-1();
+}
+
+.block {
+    display: block;
+}
+
+.detailsSection {
+    width: 100%;
+
+    .groupFlex {
+        @include is-flex(center, flex-start);
+    }
+
+    .sectionInformation {
+        min-width: 50%;
+
+        .information {
+            margin-right: 3em;
+            margin-bottom: 1em;
+            margin-top: 1em;
+        }
+
+        .nameClient {
+            font-size: 26px;
+        }
+
+        span {
+            font-size: 16px;
+        }
+    }
+
+    h1 {
+        font-size: 26px;
+    }
+
+    h2 {
+        font-size: 20px;
+        opacity: .75;
+        font-weight: bold;
+        margin-bottom: .4em;
+    }
+}
+
+.btn {
+    font-size: 16px;
+    width: 100%;
+    text-align: start;
+    font-family: 'Signika', sans-serif;
+}
